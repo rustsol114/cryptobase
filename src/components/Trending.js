@@ -18,7 +18,10 @@ const Trending = () => {
 			<h1 className="text-2xl py-4 font-bold">Trending Coins</h1>
 			<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
 				{trending.map((coin) => (
-					<div className="rounded-div flex justify-between p-4 hover:scale-105 ease-in duration-300">
+					<div
+						key={coin.item.id}
+						className="rounded-div flex justify-between p-4 hover:scale-105 ease-in duration-300"
+					>
 						<div className="flex w-full justify-between items-center">
 							<div className="flex">
 								<img

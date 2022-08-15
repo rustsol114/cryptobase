@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { ThemeProvider } from "./context/ThemeContext";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import { Route, Routes } from "react-router-dom";
 import Home from "./routes/Home";
 import Signin from "./routes/Signin";
 import Signup from "./routes/Signup";
 import Account from "./routes/Account";
+import CoinPage from "./routes/CoinPage";
 import axios from "axios";
 
 const App = () => {
@@ -29,7 +31,11 @@ const App = () => {
 				<Route path="/signin" element={<Signin />} />
 				<Route path="/signup" element={<Signup />} />
 				<Route path="/account" element={<Account />} />
+				<Route path="/coin/:coinId" element={<CoinPage />}>
+					<Route path=":coinId" />
+				</Route>
 			</Routes>
+			<Footer />
 		</ThemeProvider>
 	);
 };
