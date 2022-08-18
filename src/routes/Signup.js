@@ -15,7 +15,7 @@ const Signup = () => {
 		setError("");
 		try {
 			await signUp(email, password);
-			navigate("/account");
+			navigate("/");
 		} catch (e) {
 			setError(e.message);
 			console.log(e.message);
@@ -51,7 +51,7 @@ const Signup = () => {
 						</div>
 					</div>
 					<button className="w-full my-2 p-3 bg-button text-btnText rounded-2xl shadow-xl">
-						Sign in
+						Sign up
 					</button>
 				</form>
 				<p className="my-4">

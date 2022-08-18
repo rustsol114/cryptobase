@@ -30,7 +30,7 @@ const CoinItem = ({ coin }) => {
 	};
 
 	return (
-		<tr className="h-[80px] border-b overflow-hidden">
+		<tr className="h-[80px] border-b overflow-hidden hover:bg-secondary">
 			<td onClick={saveCoin} className="cursor-pointer">
 				{savedCoin ? <AiFillStar /> : <AiOutlineStar />}
 			</td>
