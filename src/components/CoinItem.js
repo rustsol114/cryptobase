@@ -43,7 +43,7 @@ const CoinItem = ({ coin }) => {
 							src={coin.image}
 							alt={coin.id}
 						/>
-						<p className="hidden mr-2 sm:table-cell">{coin.name}</p>
+						<p className="hidden sm:table-cell">{coin.name}</p>
 					</div>
 				</Link>
 			</td>
